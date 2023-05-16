@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "societies",
+  "info": {
+    "singularName": "society",
+    "pluralName": "societies",
+    "displayName": "Society",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "principal_phone": {
+      "type": "string",
+      "required": true
+    },
+    "secondary_phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "website": {
+      "type": "string",
+      "unique": true
+    },
+    "facebook_link": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}
